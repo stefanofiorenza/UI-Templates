@@ -10,9 +10,11 @@ import {valuesToSelectDataArray,copyAttachmentsReplacingElement} from '../../uti
 import InputText from "../widgets/InputText.jsx";
 import DatePicker from 'react-datepicker';
 import Button from '../widgets/Button.jsx'
+import * as styles from '../../css/InvoiceDetailsPageStyle.js';
+import * as cssClasses from '../../css/InvoiceDetailsPageCls.css';
 
 
-export class MainPage extends React.Component {
+export class InvoiceDetailsPage extends React.Component {
 
 
     constructor(props) {
@@ -25,32 +27,7 @@ export class MainPage extends React.Component {
 
     render() {
 
-        const clearFixStyle = {
-            clear: 'both'
-        };
-        const attachStyle = {
-            width: 400,
-            height: 30
-        }
 
-        const divSelectStyle = {
-            width: 830
-        }
-
-        const mainStyle = {display: "block"}
-        // style={mainStyle}
-
-        const txtStyle = {
-            height: 30
-        }
-
-        const buttonsStyle={
-            marginRight:40
-        }
-
-        const invoiceDivStyle={
-            marginLeft:10
-        }
 
         return (
 			<div >
@@ -84,11 +61,11 @@ export class MainPage extends React.Component {
 										<label htmlFor="office">Office</label>
 										<div>
 											<input type="text" id="office" value="Tallinn" name="office"
-												   className="input-large mandatory" style={txtStyle}/>
+												   className="input-large mandatory" style={styles.txtStyle}/>
 											&nbsp;&nbsp;&nbsp;
 											<span>Ratio</span>
 											<input type="text" id="officeRatio" value="100" name="officeRatio"
-												   className="input-mini" style={txtStyle}/><span>%</span>
+												   className="input-mini" style={styles.txtStyle}/><span>%</span>
 										</div>
 									</div>
 
@@ -96,11 +73,11 @@ export class MainPage extends React.Component {
 										<label htmlFor="office2">Additional Office</label>
 										<div>
 											<input type="text" id="office2" value="Gera" name="office2"
-												   className="input-large mandatory" style={txtStyle}/>
+												   className="input-large mandatory" style={styles.txtStyle}/>
 											&nbsp;&nbsp;&nbsp;
 											<span>Ratio</span>
 											<input type="text" id="officeRatio2" value="0" name="officeRatio2"
-												   className="input-mini" style={txtStyle}/><span>%</span>
+												   className="input-mini" style={styles.txtStyle}/><span>%</span>
 										</div>
 									</div>
 
@@ -112,11 +89,11 @@ export class MainPage extends React.Component {
 										<label htmlFor="bunit1">Business Unit</label>
 										<div>
 											<input type="text" id="bunit1" value="LiveOdds" name="bunit1"
-												   className="input-large mandatory" style={txtStyle}/>
+												   className="input-large mandatory" style={styles.txtStyle}/>
 											&nbsp;&nbsp;&nbsp;
 											<span>Ratio</span>
 											<input type="text" id="bunit1Ratio" value="100" name="bunit1Ratio"
-												   className="input-mini" style={txtStyle}/><span>%</span>
+												   className="input-mini" style={styles.txtStyle}/><span>%</span>
 										</div>
 									</div>
 
@@ -124,11 +101,11 @@ export class MainPage extends React.Component {
 										<label htmlFor="bunit2">Addtional Business Unit</label>
 										<div>
 											<input type="text" id="bunit2" value="Sales" name="bunit2"
-												   className="input-large mandatory" style={txtStyle}/>
+												   className="input-large mandatory" style={styles.txtStyle}/>
 											&nbsp;&nbsp;&nbsp;
 											<span>Ratio</span>
 											<input type="text" id="bunit2Ratio" value="0" name="bunit2Ratio"
-												   className="input-mini" style={txtStyle}/><span>%</span>
+												   className="input-mini" style={styles.txtStyle}/><span>%</span>
 										</div>
 									</div>
 								</div>
@@ -144,21 +121,21 @@ export class MainPage extends React.Component {
 								<div className="separator"></div>
 
 									<div className="widget-body">
-										<div style={invoiceDivStyle}>
+										<div style={styles.invoiceDivStyle}>
 											<label htmlFor="invoiceNumber">Invoice Number</label>
-											<input type="text" id="invoiceNumber" value=""  name="invoiceIssuer" className="input-medium mandatory" style={txtStyle} />
+											<input type="text" id="invoiceNumber" value=""  name="invoiceIssuer" className="input-medium mandatory" style={styles.txtStyle} />
 										</div>
-										<div style={invoiceDivStyle}>
+										<div style={styles.invoiceDivStyle}>
 											<label htmlFor="invoiceIssuer">Issuer</label>
-											<input type="text" id="invoiceIssuer" value="Supplier name.."  name="invoiceIssuer" className="input-medium mandatory" style={txtStyle} />
+											<input type="text" id="invoiceIssuer" value="Supplier name.."  name="invoiceIssuer" className="input-medium mandatory" style={styles.txtStyle} />
 										</div>
 										<div>
-											<label htmlFor="invoice" style={invoiceDivStyle}>Invoice Date</label>
+											<label htmlFor="invoice"style={styles.invoiceDivStyle}>Invoice Date</label>
 											<DatePicker id="from" className="dt-picker h30" dateFormat="YYYY/MM/DD"  onChange={this.updateFromDate} />
 										</div>
-										<div style={invoiceDivStyle}>
+										<div style={styles.invoiceDivStyle}>
 											<label htmlFor="invoiceTotal">Total</label>
-											<input type="text" id="invoiceTotal" value=""  name="invoiceTotal" className="input-medium mandatory" style={txtStyle} />
+											<input type="text" id="invoiceTotal" value=""  name="invoiceTotal" className="input-medium mandatory" style={styles.txtStyle} />
 										</div>
 									</div>
 								</div>
@@ -171,7 +148,7 @@ export class MainPage extends React.Component {
 									<div className="separator"></div>
 
 									<div className="widget-body">
-										<div style={invoiceDivStyle}>
+										<div style={styles.invoiceDivStyle}>
 											<div className="pull-left" >
 												<Button btnLabel="Archived" width="80" />
 											</div>
@@ -205,4 +182,4 @@ function mapStateToProps (state,ownProps) {
 	return {};
 }
 
-export default connect(mapStateToProps)(MainPage)
+export default connect(mapStateToProps)(InvoiceDetailsPage)
