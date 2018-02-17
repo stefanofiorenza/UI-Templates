@@ -10,17 +10,17 @@ import UploadInput from '../widgets/UploadInput.jsx'
 import {valuesToSelectDataArray,copyAttachmentsReplacingElement} from '../../utils/Commons.jsx';
 import InputText from "../widgets/InputText.jsx";
 import DatePicker from 'react-datepicker';
-
-
+//import 'react-datepicker/dist/react-datepicker.css';
+//import styles '../../css/NewInvoicePageCls.css';
+import styles from '../../css/NewInvoicePageCls.css';
 
 var costTypes=[
-	"costType1",
+    "costType1",
     "costType2",
     "costType3",
     "costType4",
     "costType5"
-]
-
+];
 
 export class NewInvoicePage extends React.Component  {
 
@@ -99,6 +99,7 @@ export class NewInvoicePage extends React.Component  {
 		const clearFixStyle={
 			clear:'both'
 		};
+		/*
         const attachStyle={
             width:400,
             height:30
@@ -107,16 +108,20 @@ export class NewInvoicePage extends React.Component  {
         const divSelectStyle={
             width:830
         }
+		 const mainStyle={display:"block"}
 
-        const mainStyle={display:"block"}
+		 const invoiceDivStyle={
+		 marginLeft:10
+		 }
+
+		 */
+
        // style={mainStyle}
 
         const txtStyle={
             height:30
         }
-        const invoiceDivStyle={
-            marginLeft:10
-        }
+
 
         const costTypeSelection={
             width:210
@@ -211,23 +216,23 @@ export class NewInvoicePage extends React.Component  {
 								<div className="separator"></div>
 
 								<div className="widget-body">
-									<div style={invoiceDivStyle}>
+									<div className={styles.invoiceDivStyle}>
 										<label htmlFor="invoiceNumber">Invoice Number</label>
 										<input type="text" id="invoiceNumber" value=""  name="invoiceIssuer" className="input-medium mandatory" style={txtStyle} />
 									</div>
-									<div style={invoiceDivStyle}>
+									<div className={styles.invoiceDivStyle}>
 										<label htmlFor="invoiceIssuer">Issuer</label>
 										<input type="text" id="invoiceIssuer" value="Supplier name.."  name="invoiceIssuer" className="input-medium mandatory" style={txtStyle} />
 									</div>
 									<div>
-										<label htmlFor="invoice" style={invoiceDivStyle}>Invoice Date</label>
+										<label htmlFor="invoice" className={styles.invoiceDivStyle}>Invoice Date</label>
 										<DatePicker id="from" className="dt-picker h30" dateFormat="YYYY/MM/DD"  onChange={this.updateFromDate} />
 									</div>
-									<div style={invoiceDivStyle}>
+									<div className={styles.invoiceDivStyle}>
 										<label htmlFor="invoiceTotal">Total</label>
 										<input type="text" id="invoiceTotal" value=""  name="invoiceTotal" className="input-medium mandatory" style={txtStyle} />
 									</div>
-									<div style={invoiceDivStyle}>
+									<div className={styles.invoiceDivStyle}>
 										Upload Invoice
 										<UploadInput cmpState={this.state.invoiceState} onRemoveUploadFile={this.onRemoveUploadFile} onFileSelected={this.onFileSelected} />
 									</div>

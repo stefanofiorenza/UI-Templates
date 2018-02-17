@@ -8,11 +8,11 @@ import VirtualizedSelect from 'react-virtualized-select'
 import UploadInput from '../widgets/UploadInput.jsx'
 import {valuesToSelectDataArray,copyAttachmentsReplacingElement} from '../../utils/Commons.jsx';
 import InputText from "../widgets/InputText.jsx";
-import DatePicker from 'react-datepicker';
 import Button from '../widgets/Button.jsx'
 import * as styles from '../../css/InvoiceDetailsPageStyle.js';
-import * as cssClasses from '../../css/InvoiceDetailsPageCls.css';
 
+//import * as cssClasses from '../../css/InvoiceDetailsPageCls.css';
+//import DatePicker from 'react-datepicker';
 
 export class InvoiceDetailsPage extends React.Component {
 
