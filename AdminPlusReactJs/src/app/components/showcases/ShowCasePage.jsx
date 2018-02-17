@@ -6,7 +6,7 @@ import * as ApiUrls from '../../config/app-config.js'
 
 
 
-export class MainPage extends React.Component  {
+export class ShowCasePage extends React.Component  {
 
 
 	constructor(props) {
@@ -35,7 +35,9 @@ export class MainPage extends React.Component  {
 				{/*	<h2 className="glyphicons display"><i></i> Dashboard</h2> */}
 				<br/>
 				<br/>
-				<div className="clearfix" style={clearFixStyle}></div>
+				<div className="clearfix" style={clearFixStyle}>
+					ShowCasePage
+				</div>
 			</div>
 
 
@@ -54,4 +56,4 @@ function mapStateToProps (state,ownProps) {
 	return {};
 }
 
-export default connect(mapStateToProps)(MainPage)
+export default connect(mapStateToProps)(ShowCasePage)

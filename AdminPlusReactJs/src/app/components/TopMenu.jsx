@@ -5,14 +5,8 @@ import * as ActionTypes from '../actions'
 import { hashHistory} from 'react-router';
 import { Link} from 'react-router';
 
-import TopMenuAnonymous from './TopMenuAnonymous.jsx'
+import TopMenuAnonymous from './profiles/TopMenuAnonymous.jsx'
 
-
-/*
-import TopMenuAdmin from './TopMenuAdmin.jsx'
-import {ROLE_ADMIN,ROLE_ANONYMOUS} from '../utils/Consts.js'
-
-*/
 export class TopMenu extends React.Component{
 
 	constructor(props) {

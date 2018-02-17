@@ -70,11 +70,11 @@ export class SideMenu extends React.Component {
 									<i></i><span><strong>Examples</strong></span></a>
 								<ul className="collapse" id="examples">
 
-                                    <li className="glyphicons home">
-                                        <Link to="/dashboard">
-                                            <i></i><span>Dashboard</span>
-                                        </Link>
-                                    </li>
+									<li className="glyphicons home">
+										<Link to="/dashboard">
+											<i></i><span>Dashboard</span>
+										</Link>
+									</li>
 
 									<li className="glyphicons cogwheels">
 										<Link to="/detail">

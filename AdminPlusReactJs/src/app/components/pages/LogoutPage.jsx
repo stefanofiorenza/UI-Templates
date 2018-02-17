@@ -7,7 +7,7 @@ import {removeFromIdArray,findById,removeFromArray} from '../../utils/Commons.js
 import axios from 'axios';
 import InputPrepend from '../widgets/InputPrepend.jsx'
 import MessageDisplay from '../widgets/MessageDisplay.jsx'
-import * as ApiUrls from '../../config/imt-config.js'
+import * as ApiUrls from '../../config/app-config.js'
 
 export class LogoutPage extends React.Component{
 

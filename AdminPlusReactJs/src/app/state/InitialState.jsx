@@ -1,4 +1,4 @@
-import {MOCK_LICENSE_ALL}  from './mocks/MockLicenseAll.js'
+//import {MOCK_LICENSE_ALL}  from './mocks/MockLicenseAll.js'
 
 
 import Immutable from 'immutable';

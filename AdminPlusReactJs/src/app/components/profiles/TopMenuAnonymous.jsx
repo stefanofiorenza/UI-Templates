@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as ActionTypes from '../actions'
+import * as ActionTypes from '../../actions/index'
 import { hashHistory} from 'react-router';
 import { Link} from 'react-router';
 

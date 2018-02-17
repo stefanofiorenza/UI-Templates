@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { hashHistory} from 'react-router';
 import axios from 'axios';
 
-import * as ApiUrls from '../../config/imt-config.js'
+import * as ApiUrls from '../../config/app-config.js'
 import * as StateSelectors from '../../state/StateSelectors.js'
 import * as ActionTypes from '../../actions'
 import MessageDisplay from '../widgets/MessageDisplay.jsx';
