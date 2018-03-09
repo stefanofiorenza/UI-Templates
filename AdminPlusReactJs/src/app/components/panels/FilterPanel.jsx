@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from '../../css/FilterPanel.css';
+
 export default function FilterPanel (props) {
 
   		let filterBarHeight=(props.height)? parseInt(props.height) : 55;
@@ -9,16 +11,22 @@ export default function FilterPanel (props) {
 
 		const fltBarStyle={height:filterBarHeight};  
 
+		/*
 		const fltCtrlDivStyle={
 			marginTop:filterBarMarginTop,
 			marginRight:0,
 			marginBottom:2,
 			marginLeft:filterBarMarginBottom
 		}
-		const txtStyle={height:filterBarTxtStyle}; 
-  	
+		const txtStyle={height:filterBarTxtStyle};
+		 */
+		var fltrClassName = [
+			styles.filterBar,
+            styles.filterBar2
+		].join(' ');
+
 		return (
-			<div className="filter-bar filter-bar-2" style={fltBarStyle}>				
+			<div className={fltrClassName} style={fltBarStyle}>
 					<div className="lbl glyphicons cogwheel"><i></i>Filters</div>			
 				 	 <div>				 	
 				 	 	{props.children} 								 			

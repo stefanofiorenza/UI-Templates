@@ -4,7 +4,7 @@ import MainPage from './components/pages/MainPage.jsx';
 import MasterPage from './components/MasterPage.jsx';
 import LoginPage from './components/pages/LoginPage.jsx';
 import ShowCasePage from './components/showcases/ShowCasePage.jsx';
-
+import SearchPage from './components/showcases/SearchPage.jsx';
 import RequiresAuth from './components/pages/RequiresAuth.jsx';
 
 export default(
@@ -23,7 +23,7 @@ export default(
         <Route path="lists" component={ShowCasePage} />
         <Route path="forms" component={ShowCasePage} />
         <Route path="detail" component={ShowCasePage} />
-        <Route path="search" component={ShowCasePage} />
+        <Route path="search" component={SearchPage} />
 
     </Route>
   </Router>

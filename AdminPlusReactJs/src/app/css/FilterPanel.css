@@ -1,0 +1,20 @@
+/* Filter Bar graphic */
+.filterBar div.glyphicons{margin:5px 0 0 0;padding:10px 0 0 35px;}
+.filterBar div.glyphicons i:before{top:12px;left:9px;font-size:17px;color:rgba(255, 255, 255, 0.8);}
+.filterBar div.clearfix{padding:0;clear:both;float:none;display:block;height:0;margin:0;}
+.filterBar.filterBar2{position:relative;margin-top:32px;background:#f5f5f5;padding:0 10px;}
+.filterBar.filterBar2 .lbl{position:absolute;bottom:100%;left:10px;height:32px;line-height:32px;border:1px solid #dddddd;border-bottom:1px solid #f5f5f5;background:#f5f5f5;text-transform:uppercase;color:#222222;font-weight:600;}
+.filterBar.filterBar2 .lbl i:before{top:8px;color:#222222;}
+.filterBar{background:#f5f5f5;border:1px solid #d8d9da;border-left:none;border-right:none;line-height:30px;height:60px;margin-bottom:10px;}
+.filterBar div.lbl{padding:0 10px 0 35px;background:#5DADE2;height:40px;line-height:40px;margin-right:10px;color:#fff;}
+
+
+/* Select in filterBar */
+.filterBar .Select-control{
+    height:30px;
+    width: 260px;
+}
+
+.filterBar .Select-placeholder,.filter-bar .Select-input{
+    height:30px;
+}
