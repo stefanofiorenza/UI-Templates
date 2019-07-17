@@ -1,0 +1,341 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>corso.web.demo.admin</groupId>
+  <artifactId>AdminTemplate</artifactId>
+  <version>0.0.1-SNAPSHOT</version>  
+  <packaging>war</packaging>
+  <name>AdminTemplate</name>
+  <description>AdminTemplate</description>
+  
+    <properties>
+		<version.spring>4.2.4.RELEASE</version.spring>
+		<version.springsecurity>4.0.3.RELEASE</version.springsecurity>
+		<version.c3p0>0.9.1.2</version.c3p0>
+		<version.lombok>1.14.8</version.lombok>
+		<version.logback>1.1.2</version.logback>		
+		<version.jcloverslf4j>1.7.7</version.jcloverslf4j>
+		<version.hibernate>5.1.0.Final</version.hibernate>
+		<version.hibernatevalidation>5.1.3.Final</version.hibernatevalidation>
+		<version.mysqlconnector>5.1.36</version.mysqlconnector>
+		<version.jersey>2.21</version.jersey>
+		<version.jodatime>2.7</version.jodatime>
+		<version.poi>3.11</version.poi>		
+		<version.javaxvalidation>1.1.0.Final</version.javaxvalidation>		
+		<version.jackson>2.6.3</version.jackson>
+		<version.ehcache>2.6.11</version.ehcache>
+		<version.quartz>2.2.1</version.quartz>
+		<version.servlet>3.1.0</version.servlet>
+		<version.jsp>2.1</version.jsp>
+		<version.jstl>1.2</version.jstl>
+		<version.tiles>3.0.3</version.tiles>
+		<version.httpclient>4.3.1</version.httpclient>
+		<version.powermock>1.6.2</version.powermock>
+		<version.mockito>1.10.19</version.mockito>
+		<version.junit>4.12</version.junit>		
+	</properties>
+	
+  	<dependencies>
+		
+			<!-- Spring core dependencies -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${version.spring}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${version.spring}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${version.spring}</version>
+			</dependency>
+					
+		<!--  Spring persistence modules -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${version.spring}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${version.spring}</version>
+			</dependency>
+		
+		  <dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-tx</artifactId>
+    		<version>${version.spring}</version>
+ 		 </dependency>
+  
+  			<!--  Spring web modules -->			
+  			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${version.spring}</version>
+			</dependency>			
+		
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${version.spring}</version>
+			</dependency>
+		
+		
+		<!-- Spring security -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${version.springsecurity}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${version.springsecurity}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${version.springsecurity}</version>
+			</dependency>
+
+			<!--  Jackson -->				
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${version.jackson}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${version.jackson}</version>
+			</dependency>		
+
+			<!-- Hibernate -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${version.hibernate}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${version.hibernate}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${version.hibernatevalidation}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>${version.javaxvalidation}</version>
+			</dependency>
+			
+			<!-- Hibernate 2nd level cache -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-ehcache</artifactId>
+				<version>${version.hibernate}</version>
+			</dependency>
+
+
+			<!-- LogBack dependencies -->
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${version.logback}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${version.jcloverslf4j}</version>
+			</dependency>
+
+			<!-- Datasource -->
+			<dependency>
+				<groupId>c3p0</groupId>
+				<artifactId>c3p0</artifactId>
+				<version>${version.c3p0}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${version.mysqlconnector}</version>
+			</dependency>
+
+			<!-- Scheduler -->
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>${version.quartz}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz-jobs</artifactId>
+				<version>${version.quartz}</version>
+			</dependency>
+
+			<!--  Servlet 3.1 api -->
+			<dependency>
+	            <groupId>javax.servlet</groupId>
+	            <artifactId>javax.servlet-api</artifactId>
+	            <version>${version.servlet}</version>	           
+	        </dependency>
+	        <dependency>
+	            <groupId>javax.servlet.jsp</groupId>
+	            <artifactId>jsp-api</artifactId>
+	             <version>${version.jsp}</version>  
+	        </dependency>
+	        <dependency>
+	            <groupId>javax.servlet</groupId>
+	            <artifactId>jstl</artifactId>
+	            <version>${version.jstl}</version>	          
+	        </dependency>
+				
+				
+			
+			<!-- Tiles -->			
+	        <dependency>
+	            <groupId>org.apache.tiles</groupId>
+	            <artifactId>tiles-jsp</artifactId>
+	           <version>${version.tiles}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.apache.tiles</groupId>
+	            <artifactId>tiles-core</artifactId>
+	           <version>${version.tiles}</version>
+	            <scope>compile</scope>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.apache.tiles</groupId>
+	            <artifactId>tiles-api</artifactId>
+	            <version>${version.tiles}</version>
+	            <scope>compile</scope>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.apache.tiles</groupId>
+	            <artifactId>tiles-servlet</artifactId>
+	            <version>${version.tiles}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.apache.tiles</groupId>
+	            <artifactId>tiles-template</artifactId>
+	            <version>${version.tiles}</version>
+	        </dependency>
+		
+			<!-- Other -->
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>		
+			<version>${version.httpclient}</version>
+		</dependency>
+		
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>${version.poi}</version>
+			</dependency>  
+		   <dependency>
+		    	<groupId>org.apache.poi</groupId>
+		    	<artifactId>poi-ooxml</artifactId>
+		    	<version>${version.poi}</version>
+			</dependency>		
+		
+				<!-- Need this for json to/from object
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+	
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+		 -->
+		 
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${version.jodatime}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${version.lombok}</version>
+			</dependency>
+
+		
+		<!-- hard coded versions -->
+		<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>18.0</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>1.3.1</version>
+			</dependency>
+
+			<!-- STARTOF: Test scope. -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${version.junit}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>${version.mockito}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-module-junit4</artifactId>
+				<version>${version.powermock}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-api-mockito</artifactId>
+				<version>${version.powermock}</version>
+				<scope>test</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${version.spring}</version>
+				<scope>test</scope>
+			</dependency>
+			
+			<!-- ENDOF: Test scope. -->
+		</dependencies>
+  
+</project>

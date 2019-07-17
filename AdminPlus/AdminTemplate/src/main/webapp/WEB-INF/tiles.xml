@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd"> 
+
+<tiles-definitions>
+ 
+ <!--  TEMPLATES -->
+ <definition name="baseLayout" template="/WEB-INF/templates/layout.jsp">
+  <put-attribute name="title" value="APP" />
+  <put-attribute name="meta" value="/WEB-INF/templates/meta.jsp" />
+  <put-attribute name="bootstrap" value="/WEB-INF/templates/bootstrap.jsp" />
+  <put-attribute name="themes" value="/WEB-INF/templates/themes.jsp" />
+  <put-attribute name="mainNavBar" value="/WEB-INF/templates/mainNavBar.jsp" />
+  <put-attribute name="leftMenu" value="/WEB-INF/templates/leftMenu.jsp" />
+  <put-attribute name="content" value="/WEB-INF/templates/content.jsp" /> 
+  <put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+ </definition>
+   
+ <!--  AUTH PAGES -->
+ <definition name="views/auth/login" extends="baseLayout">
+  <put-attribute name="title" value="APP : Login" />
+  <put-attribute name="titleBlock" value="Login" />  
+  <put-attribute name="navigation" value="" />
+  <put-attribute name="body" value="/WEB-INF/pages/auth/login.jsp" />
+ </definition>
+   
+ <definition name="views/auth/logout" extends="baseLayout"> 
+  <put-attribute name="title" value="SK BANK : Logout" />
+  <put-attribute name="body" value="/WEB-INF/pages/auth/logout.jsp" />
+ </definition>
+ 
+ <definition name="views/auth/denied" extends="baseLayout">
+  <put-attribute name="title" value="SK BANK : Denied" />
+  <put-attribute name="titleBlock" value="Access Denied" /> 
+  <put-attribute name="body" value="/WEB-INF/pages/auth/denied.jsp" />
+ </definition>
+ 
+ <!-- COMMON VIEWS -->
+ <definition name="views/common/main" extends="baseLayout">
+  <put-attribute name="title" value="SK BANK : Main Page" />
+  <put-attribute name="titleBlock" value="Home Page" /> 
+  <put-attribute name="body" value="/WEB-INF/templates/homePage.jsp" />
+ </definition>
+ 
+ 
+ 
+<!-- TELLER VIEWS -->
+ 
+<definition name="teller/registerClient" extends="baseLayout">
+  <put-attribute name="title" value="SK BANK : Register Client" />
+  <put-attribute name="titleBlock" value="Register Client" /> 
+  <put-attribute name="body" value="/WEB-INF/pages/teller/registerClient.jsp" />
+ </definition>
+ 
+ <definition name="teller/addAccountToClient" extends="baseLayout">
+  <put-attribute name="title" value="SK BANK : Add Accounts To Client" />
+  <put-attribute name="titleBlock" value="Add Accounts To Client" /> 
+  <put-attribute name="body" value="/WEB-INF/pages/teller/addAccountToClient.jsp" />
+ </definition>
+ 
+ 
+ 
+ <!-- CLIENT VIEWS -->
+ 
+ <definition name="client/viewListAccounts" extends="baseLayout">
+  <put-attribute name="title" value="SK BANK : View List Accounts" />
+  <put-attribute name="titleBlock" value="My Accounts" /> 
+   <put-attribute name="body" value="/WEB-INF/pages/client/viewListAccounts.jsp" />
+ </definition>
+ 
+   
+</tiles-definitions>
