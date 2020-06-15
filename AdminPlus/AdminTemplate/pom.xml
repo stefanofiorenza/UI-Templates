@@ -8,7 +8,7 @@
   <description>AdminTemplate</description>
   
     <properties>
-		<version.spring>4.2.4.RELEASE</version.spring>
+		<version.spring>5.2.7.RELEASE</version.spring>
 		<version.springsecurity>4.0.3.RELEASE</version.springsecurity>
 		<version.c3p0>0.9.1.2</version.c3p0>
 		<version.lombok>1.14.8</version.lombok>
