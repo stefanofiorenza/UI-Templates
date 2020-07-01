@@ -23,7 +23,7 @@
 		<version.javaxvalidation>1.1.0.Final</version.javaxvalidation>		
 		<version.jackson>2.6.3</version.jackson>
 		<version.ehcache>2.6.11</version.ehcache>
-		<version.quartz>2.2.1</version.quartz>
+		<version.quartz>2.3.2</version.quartz>
 		<version.servlet>3.1.0</version.servlet>
 		<version.jsp>2.1</version.jsp>
 		<version.jstl>1.2</version.jstl>
