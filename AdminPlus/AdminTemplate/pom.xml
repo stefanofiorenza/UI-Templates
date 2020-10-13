@@ -31,7 +31,7 @@
 		<version.httpclient>4.3.1</version.httpclient>
 		<version.powermock>1.6.2</version.powermock>
 		<version.mockito>1.10.19</version.mockito>
-		<version.junit>4.12</version.junit>		
+		<version.junit>4.13.1</version.junit>		
 	</properties>
 	
   	<dependencies>
