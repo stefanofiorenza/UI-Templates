@@ -9,7 +9,7 @@
   
     <properties>
 		<version.spring>4.2.4.RELEASE</version.spring>
-		<version.springsecurity>4.0.3.RELEASE</version.springsecurity>
+		<version.springsecurity>5.2.10.RELEASE</version.springsecurity>
 		<version.c3p0>0.9.1.2</version.c3p0>
 		<version.lombok>1.14.8</version.lombok>
 		<version.logback>1.1.2</version.logback>		
