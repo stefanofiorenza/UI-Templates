@@ -28,7 +28,7 @@
 		<version.jsp>2.1</version.jsp>
 		<version.jstl>1.2</version.jstl>
 		<version.tiles>3.0.3</version.tiles>
-		<version.httpclient>4.3.1</version.httpclient>
+		<version.httpclient>4.5.13</version.httpclient>
 		<version.powermock>1.6.2</version.powermock>
 		<version.mockito>1.10.19</version.mockito>
 		<version.junit>4.12</version.junit>		
