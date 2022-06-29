@@ -19,7 +19,7 @@
 		<version.mysqlconnector>5.1.36</version.mysqlconnector>
 		<version.jersey>2.21</version.jersey>
 		<version.jodatime>2.7</version.jodatime>
-		<version.poi>3.11</version.poi>		
+		<version.poi>4.1.1</version.poi>		
 		<version.javaxvalidation>1.1.0.Final</version.javaxvalidation>		
 		<version.jackson>2.6.3</version.jackson>
 		<version.ehcache>2.6.11</version.ehcache>
